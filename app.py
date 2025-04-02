@@ -35,3 +35,5 @@ if response.status_code == 200:
     st.metric(label="💰 총 사용 금액 (USD)", value=f"${usage_usd:.2f}")
 else:
     st.error("❌ 사용량 데이터를 불러올 수 없습니다.")
+    st.code(f"응답 코드: {response.status_code}")
+    st.code(response.text)
